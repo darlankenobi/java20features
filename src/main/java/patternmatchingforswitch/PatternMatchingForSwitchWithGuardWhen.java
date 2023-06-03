@@ -23,10 +23,10 @@ public class PatternMatchingForSwitchWithGuardWhen {
     }
 
     public static void main(String[] args) {
-        System.out.printf("Using traditional switch guard: %s%n", getDoubleTraditionalSwitch(""));
-        System.out.printf("Using traditional switch guard: %s%n", getDoubleTraditionalSwitch("100"));
-        System.out.printf("Using getDoubleUsingPatternMatchingForSwitch: %s%n", getDoubleUsingGuardedPattern(""));
-        System.out.printf("Using getDoubleUsingPatternMatchingForSwitch: %s%n", getDoubleUsingGuardedPattern("2020"));
+        System.out.printf("Using traditional switch with if guard: %s%n", getDoubleTraditionalSwitch(""));
+        System.out.printf("Using traditional switch with if guard: %s%n", getDoubleTraditionalSwitch("100"));
+        System.out.printf("Using new guard: %s%n", getDoubleUsingGuardedPattern(""));
+        System.out.printf("Using new guard: %s%n", getDoubleUsingGuardedPattern("20000"));
     }
 
 }
