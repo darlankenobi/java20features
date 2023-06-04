@@ -14,9 +14,9 @@
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
-    <option name="ADDITIONAL_OPTIONS_STRING" value="--enable-preview" />
+    <option name="ADDITIONAL_OPTIONS_STRING" value="--enable-preview --add-modules jdk.incubator.concurrent" />
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="java20features" options="--enable-preview" />
+      <module name="java20features" options="--enable-preview --add-modules jdk.incubator.concurrent" />
     </option>
   </component>
 </project>

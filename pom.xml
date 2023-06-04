@@ -14,6 +14,19 @@
         <maven.compiler.release>20</maven.compiler.release>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>javax</groupId>
+            <artifactId>javaee-api</artifactId>
+            <version>8.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.json</artifactId>
+            <version>1.1.4</version>
+        </dependency>
+    </dependencies>
+
     <build>
         <plugins>
             <plugin>
@@ -24,7 +37,8 @@
                     <release>20</release>
                     <source>20</source>
                     <target>20</target>
-                    <compilerArgs>--enable-preview</compilerArgs>
+                    <compilerArgument>--enable-preview</compilerArgument>
+                    <compilerArgument>--add-modules jdk.incubator.concurrent</compilerArgument>
                 </configuration>
             </plugin>
         </plugins>
