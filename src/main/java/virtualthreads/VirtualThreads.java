@@ -17,7 +17,7 @@ public class VirtualThreads {
         virtualThreads.executeTask(numberOfThreads, executorService);
         var end = Instant.now();
         System.out.println("-------------------- Done ----------------------");
-        System.out.printf("This code ran a total of %d tasks in %d seconds",
+        System.out.printf("This code ran a total of %d tasks in %d seconds%n",
             numberOfThreads,
             Duration.between(begin, end).toSeconds());
     }
@@ -26,7 +26,7 @@ public class VirtualThreads {
         return () -> {
             try {
                 long timeout = (long) (Math.random() * 10000) + 100;
-                System.out.printf("Task %d executing for %s", Thread.currentThread().threadId(), timeout);
+                System.out.printf("Task %d executing for %s ms%n", Thread.currentThread().threadId(), timeout);
                 Thread.sleep(timeout);
                 System.out.printf("Task %d done!%n", Thread.currentThread().threadId());
             } catch (InterruptedException e) {
